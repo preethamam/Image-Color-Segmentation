@@ -1,5 +1,5 @@
 # Image color segmentation
-[![View Image stitching cylindrical/spherical/planar given R and K on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/178979-image-stitching-cylindrical-spherical-planar-given-r-and-k) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Stitcher-RK-Matrices-Cylindrical-Spherical-Planar)
+[![View Image color segmentation on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/181134-image-color-segmentation) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Color-Segmentation)
 
 This MATLAB-based repository provides a flexible framework for segmenting color images in two complementary ways:
 
