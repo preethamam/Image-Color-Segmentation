@@ -1,15 +1,12 @@
 # Image color segmentation
 [![View Image stitching cylindrical/spherical/planar given R and K on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/178979-image-stitching-cylindrical-spherical-planar-given-r-and-k) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Stitcher-RK-Matrices-Cylindrical-Spherical-Planar)
 
-# Original images:
-| Image filename        | Image | 
-|-----------------------|---------------------------------------------------|
-| **Alligator1.jpg**    | <img src="images/Alligator1.jpg" width="750"/>    |
-| **Alligator28.jpg**   | <img src="images/Alligator28.jpg" width="750"/>   |
-| **fabric.png**        | <img src="images/fabric.png" width="750"/>        |
-| **hestain.png**       | <img src="images/hestain.png" width="750"/>       |
-| **peppers.png**       | <img src="images/peppers.png" width="750"/>       |
-| **Thin39.jpg**        | <img src="images/Thin39.jpg" width="750"/>        |
+# 🖼️ Original Images:
+
+| **Alligator1**<br><img src="images/Alligator1.jpg" width="180"/><br>`Alligator1.jpg` | **Alligator28**<br><img src="images/Alligator28.jpg" width="180"/><br>`Alligator28.jpg` | **Fabric**<br><img src="images/fabric.png" width="180"/><br>`fabric.png` |
+|:---:|:---:|:---:|
+| **Hestain**<br><img src="images/hestain.png" width="180"/><br>`hestain.png`    | **Peppers**<br><img src="images/peppers.png" width="180"/><br>`peppers.png`    | **Thin39**<br><img src="images/Thin39.jpg" width="180"/><br>`Thin39.jpg`      |
+
 
 # Labeled images:
 ## 📊 Color Picking Results
