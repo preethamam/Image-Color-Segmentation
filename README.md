@@ -79,7 +79,8 @@ For each of the six original images, the README showcases:
 - **Preprocessing for Computer Vision:** Simplify color heterogeneity before applying feature detectors or classifiers.  
 - **Artistic Effects and Color Analysis:** Automatically segment and recolorize images for design or research.  
 - **Educational Demonstration:** Illustrate the impact of different color spaces on segmentation quality.
-"""
+
+---
 
 # 🖼️ Original Images:
 
