@@ -1,6 +1,86 @@
 # Image color segmentation
 [![View Image stitching cylindrical/spherical/planar given R and K on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/178979-image-stitching-cylindrical-spherical-planar-given-r-and-k) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Stitcher-RK-Matrices-Cylindrical-Spherical-Planar)
 
+This MATLAB-based repository provides a flexible framework for segmenting color images in two complementary ways:
+
+1. **Color Picking**  
+   Threshold-based segmentation by selecting a target color vector in one of three color spaces (RGB, HSV, or CIELAB) and isolating pixels within a user-specified tolerance.
+
+2. **K-Means Clustering**  
+   Unsupervised segmentation by grouping all pixels in the chosen color space into *k* clusters and visualizing each cluster as a distinct region.
+
+---
+
+## Repository Structure
+
+- **`images/`**  
+  Contains six test images covering a variety of textures and subjects:  
+  - `Alligator1.jpg`  
+  - `Alligator28.jpg`  
+  - `fabric.png`  
+  - `hestain.png`  
+  - `peppers.png`  
+  - `Thin39.jpg`
+
+- **`assets/`**  
+  Stores generated outputs used in the README demonstration, including:  
+  - Segmentation maps from both Color-Picking and K-Means methods  
+  - Pixel-value distribution plots  
+  - RGB, HSV, and LAB K-Means segmentation maps  
+  - Cluster-centroid visualizations for qualitative analysis
+
+---
+
+## Key Scripts
+
+- **`main.m`**  
+  - Reads each image from `images/`  
+  - Configures parameters (color triplet, tolerance, number of clusters, color space)  
+  - Invokes the appropriate segmentation routine  
+  - Saves and/or displays results to `assets/`
+
+- **`colorSegment.m`**  
+  Implements the Color-Picking approach by:  
+  1. Converting the image to the selected color space  
+  2. Computing per-pixel Euclidean distance to the user-provided color vector  
+  3. Thresholding distances to produce a binary mask and overlay image highlighting segmented regions
+
+- **K-Means Clustering Routine**  
+  (Called from `main.m` or helper functions)  
+  - Transforms the image into the chosen color space  
+  - Applies MATLAB’s `kmeans` function to cluster pixel vectors into *k* groups  
+  - Generates a labeled segmentation map and displays each cluster in a unique color
+
+- **`demo.m`**  
+  Provides a hands-on example showing:  
+  - How to call `colorSegment` with sample RGB triplets and tolerance levels  
+  - How to plot pixel distributions (histograms over channel values or distance metrics)  
+  - How to perform K-Means segmentation and visualize cluster centroids
+
+---
+
+## Demonstrated Results
+
+For each of the six original images, the README showcases:
+
+1. **Color-Picking Results**  
+   - Segmentation maps in RGB, HSV, and LAB  
+   - Corresponding pixel-distribution charts to justify the selected tolerance
+
+2. **K-Means Clustering Results**  
+   - Segmentation maps for each color space  
+   - Visual summaries of each cluster’s centroid color to aid interpretation
+
+---
+
+## Use Cases & Extensions
+
+- **Object or Background Extraction:** Remove unwanted regions by picking their dominant color.  
+- **Preprocessing for Computer Vision:** Simplify color heterogeneity before applying feature detectors or classifiers.  
+- **Artistic Effects and Color Analysis:** Automatically segment and recolorize images for design or research.  
+- **Educational Demonstration:** Illustrate the impact of different color spaces on segmentation quality.
+"""
+
 # 🖼️ Original Images:
 
 | **Alligator1**<br><img src="images/Alligator1.jpg" width="300"/><br>`Alligator1.jpg` | **Alligator28**<br><img src="images/Alligator28.jpg" width="300"/><br>`Alligator28.jpg` | **Fabric**<br><img src="images/fabric.png" width="300"/><br>`fabric.png` |
