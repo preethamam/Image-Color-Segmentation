@@ -1,6 +1,15 @@
 # Image color segmentation
 [![View Image stitching cylindrical/spherical/planar given R and K on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/178979-image-stitching-cylindrical-spherical-planar-given-r-and-k) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Stitcher-RK-Matrices-Cylindrical-Spherical-Planar)
 
+# Original images:
+| Image filename        | Image | 
+| **Alligator1.jpg**    | <img src="images/Alligator1.jpg" width="750"/>   |
+| **Alligator28.jpg**   | <img src="images/Alligator28.jpgg" width="750"/>   |
+| **fabric.png**        | <img src="images/fabric.png.png" width="750"/>   |
+| **hestain.png**       | <img src="images/hestain.png.png" width="750"/>   |
+| **peppers.png**       | <img src="images/peppers.png.png" width="750"/>   |
+| **Thin39.jpg**        | <img src="images/Thin39.jpg.png" width="750"/>   |
+
 # Labeled images:
 ## 📊 Color Picking Results
 
