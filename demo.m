@@ -24,7 +24,7 @@ for j = 1:length(input_colorspace)
         input.filename = images(i).name;
 
         % Get the pixel labels
-        pixelLabels = colorSegment (Ioriginal, input);
+        pixelLabels = colorSegment (input, Ioriginal);
 
         close all;
     end

@@ -14,4 +14,4 @@ Ioriginal = imread('images/peppers.png');
 
 % Get the pixel labels
 input.filename = 'peppers.png';
-pixelLabels = colorSegment (Ioriginal, input);
+pixelLabels = colorSegment (input, Ioriginal);

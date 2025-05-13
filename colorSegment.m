@@ -1,4 +1,4 @@
-function  pixelLabels = colorSegment (Ioriginal, input)
+function  pixelLabels = colorSegment (input, Ioriginal)
 
 %//%************************************************************************%
 %//%*                         Color segmenter						       *%
@@ -17,8 +17,8 @@ function  pixelLabels = colorSegment (Ioriginal, input)
 %
 %************************************************************************%
 %
-% Usage: pixelLabels = colorSegment (Ioriginal, input)
-% Inputs:   Ioriginal    - Input color image
+% Usage: pixelLabels = colorSegment (input, Ioriginal)
+% Inputs:   
 %           input        - Input struct
 %           colorspace   - color segmentation of annotatations by color
 %                           space 'rgb' | 'hsv' | 'lab'
@@ -30,11 +30,56 @@ function  pixelLabels = colorSegment (Ioriginal, input)
 %                                % Else, uses input.RGBTriplet
 %           input.KClusters - 3; % K clusters
 %           input.ShowPlots - true; % Show plots
+%           Ioriginal    - Input color image
 %
 %
 % Outputs:  pixelLabels  - Output pixels labels
 %           
 %
+
+    % Check the number of input arguments
+    if nargin < 2
+        error('Not enough input arguments. Usage: pixelLabels = colorSegment(Ioriginal, input)');
+    end
+
+    % Validate the input struct fields
+    requiredFields = {'RGBTriplet', 'colorspace', 'tolerance', 'Kmeans', 'KClusters', 'ShowPlots'};
+    for i = 1:length(requiredFields)
+        if ~isfield(input, requiredFields{i})
+            error('Input struct is missing the required field: %s', requiredFields{i});
+        end
+    end
+
+    % Validate colorspace
+    validColorSpaces = {'rgb', 'hsv', 'lab'};
+    if ~ismember(lower(input.colorspace), validColorSpaces)
+        error('Invalid colorspace. Valid options are: ''rgb'', ''hsv'', ''lab''.');
+    end
+
+    % Validate RGBTriplet
+    if ~isnumeric(input.RGBTriplet) || numel(input.RGBTriplet) ~= 3
+        error('RGBTriplet must be a numeric array with 3 elements.');
+    end
+
+    % Validate tolerance
+    if ~isnumeric(input.tolerance) || input.tolerance < 0
+        error('Tolerance must be a non-negative numeric value.');
+    end
+
+    % Validate Kmeans
+    if ~islogical(input.Kmeans)
+        error('Kmeans must be a logical value (true or false).');
+    end
+
+    % Validate KClusters
+    if ~isnumeric(input.KClusters) || input.KClusters <= 0 || mod(input.KClusters, 1) ~= 0
+        error('KClusters must be a positive integer.');
+    end
+
+    % Validate ShowPlots
+    if ~islogical(input.ShowPlots)
+        error('ShowPlots must be a logical value (true or false).');
+    end
 
     % Read the original color image and get sizes
     [imheight, imwidth, imbytesppix]  = size(Ioriginal);
