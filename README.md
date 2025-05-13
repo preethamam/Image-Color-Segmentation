@@ -29,8 +29,6 @@
 
 ## 🎨 K-means Clustering Results
 
-### Cluster Centroids Visualizations
-
 ### Segmentation Maps after Clustering
 
 | Dataset      | RGB (k-means)                                                        | HSV (k-means)                                                        | LAB (k-means)                                                        |
@@ -42,6 +40,7 @@
 | **peppers**      | <img src="assets/segmap_peppers_rgb_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_hsv_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_lab_kmeans.png" width="350"/>     |
 | **thin39**       | <img src="assets/segmap_thin39_rgb_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_hsv_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_lab_kmeans.png" width="350"/>      |
 
+### Cluster Centroids Visualizations
 
 | Dataset      | RGB (k-means)                                                        | HSV (k-means)                                                        | LAB (k-means)                                                        |
 |--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|
