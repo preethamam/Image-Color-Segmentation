@@ -3,12 +3,13 @@
 
 # Original images:
 | Image filename        | Image | 
-| **Alligator1.jpg**    | <img src="images/Alligator1.jpg" width="750"/>   |
+|-----------------------|---------------------------------------------------|
+| **Alligator1.jpg**    | <img src="images/Alligator1.jpg" width="750"/>    |
 | **Alligator28.jpg**   | <img src="images/Alligator28.jpg" width="750"/>   |
-| **fabric.png**        | <img src="images/fabric.png" width="750"/>   |
-| **hestain.png**       | <img src="images/hestain.png" width="750"/>   |
-| **peppers.png**       | <img src="images/peppers.png" width="750"/>   |
-| **Thin39.jpg**        | <img src="images/Thin39.jpg" width="750"/>   |
+| **fabric.png**        | <img src="images/fabric.png" width="750"/>        |
+| **hestain.png**       | <img src="images/hestain.png" width="750"/>       |
+| **peppers.png**       | <img src="images/peppers.png" width="750"/>       |
+| **Thin39.jpg**        | <img src="images/Thin39.jpg" width="750"/>        |
 
 # Labeled images:
 ## 📊 Color Picking Results
