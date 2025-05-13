@@ -3,9 +3,9 @@
 
 # 🖼️ Original Images:
 
-| **Alligator1**<br><img src="images/Alligator1.jpg" width="180"/><br>`Alligator1.jpg` | **Alligator28**<br><img src="images/Alligator28.jpg" width="180"/><br>`Alligator28.jpg` | **Fabric**<br><img src="images/fabric.png" width="180"/><br>`fabric.png` |
+| **Alligator1**<br><img src="images/Alligator1.jpg" width="300"/><br>`Alligator1.jpg` | **Alligator28**<br><img src="images/Alligator28.jpg" width="300"/><br>`Alligator28.jpg` | **Fabric**<br><img src="images/fabric.png" width="300"/><br>`fabric.png` |
 |:---:|:---:|:---:|
-| **Hestain**<br><img src="images/hestain.png" width="180"/><br>`hestain.png`    | **Peppers**<br><img src="images/peppers.png" width="180"/><br>`peppers.png`    | **Thin39**<br><img src="images/Thin39.jpg" width="180"/><br>`Thin39.jpg`      |
+| **Hestain**<br><img src="images/hestain.png" width="300"/><br>`hestain.png`    | **Peppers**<br><img src="images/peppers.png" width="300"/><br>`peppers.png`    | **Thin39**<br><img src="images/Thin39.jpg" width="300"/><br>`Thin39.jpg`      |
 
 
 # Labeled images:
