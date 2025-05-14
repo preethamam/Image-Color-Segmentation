@@ -102,7 +102,7 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/segmap_hestain_rgb.png" width="350"/>      | <img src="assets/segmap_hestain_hsv.png" width="350"/>      | <img src="assets/segmap_hestain_lab.png" width="350"/>      |
 | **peppers**      | <img src="assets/segmap_peppers_rgb.png" width="350"/>      | <img src="assets/segmap_peppers_hsv.png" width="350"/>      | <img src="assets/segmap_peppers_lab.png" width="350"/>      |
 | **thin39**       | <img src="assets/segmap_thin39_rgb.png" width="350"/>       | <img src="assets/segmap_thin39_hsv.png" width="350"/>       | <img src="assets/segmap_thin39_lab.png" width="350"/>       |
-| Dataset      | XYZ                                                             | YCbCr                                                             | YIQ (NTSC)                                                             |
+|       | XYZ                                                             | YCbCr                                                             | YIQ (NTSC)                                                             |
 | **alligator1**   | <img src="assets/segmap_alligator1_xyz.png" width="350"/>   | <img src="assets/segmap_alligator1_ycbcr.png" width="350"/>   | <img src="assets/segmap_alligator1_yiq.png" width="350"/>   |
 | **alligator28**  | <img src="assets/segmap_alligator28_xyz.png" width="350"/>  | <img src="assets/segmap_alligator28_ycbcr.png" width="350"/>  | <img src="assets/segmap_alligator28_yiq.png" width="350"/>  |
 | **fabric**       | <img src="assets/segmap_fabric_xyz.png" width="350"/>       | <img src="assets/segmap_fabric_ycbcr.png" width="350"/>       | <img src="assets/segmap_fabric_yiq.png" width="350"/>       |
@@ -120,8 +120,7 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/pixdistrib_hestain_rgb.png" width="350"/>     | <img src="assets/pixdistrib_hestain_hsv.png" width="350"/>     | <img src="assets/pixdistrib_hestain_lab.png" width="350"/>     |
 | **peppers**      | <img src="assets/pixdistrib_peppers_rgb.png" width="350"/>     | <img src="assets/pixdistrib_peppers_hsv.png" width="350"/>     | <img src="assets/pixdistrib_peppers_lab.png" width="350"/>     |
 | **thin39**       | <img src="assets/pixdistrib_thin39_rgb.png" width="350"/>      | <img src="assets/pixdistrib_thin39_hsv.png" width="350"/>      | <img src="assets/pixdistrib_thin39_lab.png" width="350"/>      |
-| Dataset      | XYZ                                                                 | YCbCr                                                                 | YIQ (NTSC)                                             |
-
+|       | XYZ                                                                 | YCbCr                                                                 | YIQ (NTSC)                                             |
 | **alligator1**   | <img src="assets/pixdistrib_alligator1_xyz.png" width="350"/>  | <img src="assets/pixdistrib_alligator1_ycbcr.png" width="350"/>  | <img src="assets/pixdistrib_alligator1_yiq.png" width="350"/>  |
 | **alligator28**  | <img src="assets/pixdistrib_alligator28_xyz.png" width="350"/> | <img src="assets/pixdistrib_alligator28_ycbcr.png" width="350"/> | <img src="assets/pixdistrib_alligator28_yiq.png" width="350"/> |
 | **fabric**       | <img src="assets/pixdistrib_fabric_xyz.png" width="350"/>      | <img src="assets/pixdistrib_fabric_ycbcr.png" width="350"/>      | <img src="assets/pixdistrib_fabric_yiq.png" width="350"/>      |
@@ -142,7 +141,7 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/segmap_hestain_rgb_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_hsv_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_lab_kmeans.png" width="350"/>     |
 | **peppers**      | <img src="assets/segmap_peppers_rgb_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_hsv_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_lab_kmeans.png" width="350"/>     |
 | **thin39**       | <img src="assets/segmap_thin39_rgb_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_hsv_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_lab_kmeans.png" width="350"/>      |
-| Dataset      | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                            |
+|       | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                            |
 | **alligator1**   | <img src="assets/segmap_alligator1_xyz_kmeans.png" width="350"/>  | <img src="assets/segmap_alligator1_ycbcr_kmeans.png" width="350"/>  | <img src="assets/segmap_alligator1_yiq_kmeans.png" width="350"/>  |
 | **alligator28**  | <img src="assets/segmap_alligator28_xyz_kmeans.png" width="350"/> | <img src="assets/segmap_alligator28_ycbcr_kmeans.png" width="350"/> | <img src="assets/segmap_alligator28_yiq_kmeans.png" width="350"/> |
 | **fabric**       | <img src="assets/segmap_fabric_xyz_kmeans.png" width="350"/>      | <img src="assets/segmap_fabric_ycbcr_kmeans.png" width="350"/>      | <img src="assets/segmap_fabric_yiq_kmeans.png" width="350"/>      |
@@ -160,7 +159,7 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/cluster_hestain_rgb_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_hsv_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_lab_kmeans.png" width="350"/>    |
 | **peppers**      | <img src="assets/cluster_peppers_rgb_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_hsv_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_lab_kmeans.png" width="350"/>    |
 | **thin39**       | <img src="assets/cluster_thin39_rgb_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_hsv_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_lab_kmeans.png" width="350"/>     |
-| Dataset      | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                            |
+|       | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                            |
 | **alligator1**   | <img src="assets/cluster_alligator1_xyz_kmeans.png" width="350"/> | <img src="assets/cluster_alligator1_ycbcr_kmeans.png" width="350"/> | <img src="assets/cluster_alligator1_yiq_kmeans.png" width="350"/> |
 | **alligator28**  | <img src="assets/cluster_alligator28_xyz_kmeans.png" width="350"/>| <img src="assets/cluster_alligator28_ycbcr_kmeans.png" width="350"/>| <img src="assets/cluster_alligator28_yiq_kmeans.png" width="350"/>|
 | **fabric**       | <img src="assets/cluster_fabric_xyz_kmeans.png" width="350"/>     | <img src="assets/cluster_fabric_ycbcr_kmeans.png" width="350"/>     | <img src="assets/cluster_fabric_yiq_kmeans.png" width="350"/>     |
