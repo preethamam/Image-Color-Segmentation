@@ -1,7 +1,7 @@
 # Image color segmentation
 [![View Image color segmentation on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/181134-image-color-segmentation) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Color-Segmentation)
 
-This MATLAB-based comprehensive color space repository provides a flexible framework for segmenting color images in two complementary ways:
+This MATLAB-based repository provides a comprehensive color space flexible framework for segmenting color images in two complementary ways:
 
 1. **Color Picking**  
    Threshold-based segmentation by selecting a target color vector in one of three color spaces (RGB, HSV, CIELAB, CIEXYZ, YCbCr or YIQ (NTSC)) and isolating pixels within a user-specified tolerance.
