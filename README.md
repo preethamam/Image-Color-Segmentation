@@ -39,6 +39,14 @@ This MATLAB-based repository provides a comprehensive color space flexible frame
   - Invokes the appropriate segmentation routine  
   - Saves and/or displays results to `assets/`
 
+- **` main_interactive.m`**  
+  - Reads each image from `images/`  
+  - Configures parameters (color triplet, tolerance, number of clusters, color space)
+  - Shows a window displaying the image and a region can be selected by free-hand sketch
+  - The average RGB values in this selection will be computed and set as the input for `input.RGBTriplet` 
+  - Invokes the appropriate segmentation routine  
+  - Saves and/or displays results to `assets/`
+   
 - **`colorSegment.m`**  
   Implements the Color-Picking approach by:  
   1. Converting the image to the selected color space  
