@@ -2,9 +2,10 @@ clear; close all; clc;
 
 %$ Inputs
 input_RGBTriplet = [0,0,255; 0,255,0; 255,0,0; 255,0,0; 220,70,190; 255,0,0]; % RGB value to segment
-input_colorspace = {'rgb','hsv','lab'}; % 'rgb' | 'hsv' |'lab'
+input_colorspace = {'xyz', 'ycbcr', 'yiq'}; % 'rgb' | 'hsv' |'lab' | 'xyz' 
+                                        %  'ycbcr' | 'yiq' (NTSC)
 input.tolerance = 70;
-input.Kmeans = true; % If true uses K-means clustering. 
+input.Kmeans = false; % If true uses K-means clustering. 
                      % Else, uses input.RGBTriplet
 input.KClusters = 3; % K clusters
 input.ShowPlots = true; % Show plots

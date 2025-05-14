@@ -1,7 +1,8 @@
 clear; close all; clc;
 
 %$ Inputs
-input.colorspace = 'hsv'; % 'rgb' | 'hsv' |'lab'
+input.colorspace = 'hsv'; % 'rgb' | 'hsv' |'lab' | 'xyz' 
+                          %  'ycbcr' | 'yiq' (NTSC)
 input.tolerance = 70;
 input.Kmeans = false; % If true uses K-means clustering. 
                      % Else, uses input.RGBTriplet

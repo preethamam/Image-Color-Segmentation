@@ -1,10 +1,10 @@
 # Image color segmentation
 [![View Image color segmentation on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/181134-image-color-segmentation) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/Image-Color-Segmentation)
 
-This MATLAB-based repository provides a flexible framework for segmenting color images in two complementary ways:
+This MATLAB-based comprehensive color space repository provides a flexible framework for segmenting color images in two complementary ways:
 
 1. **Color Picking**  
-   Threshold-based segmentation by selecting a target color vector in one of three color spaces (RGB, HSV, or CIELAB) and isolating pixels within a user-specified tolerance.
+   Threshold-based segmentation by selecting a target color vector in one of three color spaces (RGB, HSV, CIELAB, CIEXYZ, YCbCr or YIQ (NTSC)) and isolating pixels within a user-specified tolerance.
 
 2. **K-Means Clustering**  
    Unsupervised segmentation by grouping all pixels in the chosen color space into *k* clusters and visualizing each cluster as a distinct region.
@@ -64,7 +64,7 @@ This MATLAB-based repository provides a flexible framework for segmenting color 
 For each of the six original images, the README showcases:
 
 1. **Color-Picking Results**  
-   - Segmentation maps in RGB, HSV, and LAB  
+   - Segmentation maps in RGB, HSV, LAB, XYZ, YCbCr or YIQ (NTSC)  
    - Corresponding pixel-distribution charts to justify the selected tolerance
 
 2. **K-Means Clustering Results**  
@@ -102,6 +102,15 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/segmap_hestain_rgb.png" width="350"/>      | <img src="assets/segmap_hestain_hsv.png" width="350"/>      | <img src="assets/segmap_hestain_lab.png" width="350"/>      |
 | **peppers**      | <img src="assets/segmap_peppers_rgb.png" width="350"/>      | <img src="assets/segmap_peppers_hsv.png" width="350"/>      | <img src="assets/segmap_peppers_lab.png" width="350"/>      |
 | **thin39**       | <img src="assets/segmap_thin39_rgb.png" width="350"/>       | <img src="assets/segmap_thin39_hsv.png" width="350"/>       | <img src="assets/segmap_thin39_lab.png" width="350"/>       |
+|--------------|-----------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| Dataset      | XYZ                                                             | YCbCr                                                             | YIQ (NTSC)                                                             |
+|--------------|-----------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| **alligator1**   | <img src="assets/segmap_alligator1_xyz.png" width="350"/>   | <img src="assets/segmap_alligator1_ycbcr.png" width="350"/>   | <img src="assets/segmap_alligator1_yiq.png" width="350"/>   |
+| **alligator28**  | <img src="assets/segmap_alligator28_xyz.png" width="350"/>  | <img src="assets/segmap_alligator28_ycbcr.png" width="350"/>  | <img src="assets/segmap_alligator28_yiq.png" width="350"/>  |
+| **fabric**       | <img src="assets/segmap_fabric_xyz.png" width="350"/>       | <img src="assets/segmap_fabric_ycbcr.png" width="350"/>       | <img src="assets/segmap_fabric_yiq.png" width="350"/>       |
+| **hestain**      | <img src="assets/segmap_hestain_xyz.png" width="350"/>      | <img src="assets/segmap_hestain_ycbcr.png" width="350"/>      | <img src="assets/segmap_hestain_yiq.png" width="350"/>      |
+| **peppers**      | <img src="assets/segmap_peppers_xyz.png" width="350"/>      | <img src="assets/segmap_peppers_ycbcr.png" width="350"/>      | <img src="assets/segmap_peppers_yiq.png" width="350"/>      |
+| **thin39**       | <img src="assets/segmap_thin39_xyz.png" width="350"/>       | <img src="assets/segmap_thin39_ycbcr.png" width="350"/>       | <img src="assets/segmap_thin39_yiq.png" width="350"/>       |
 
 ### Pixel Distributions
 
@@ -113,6 +122,15 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/pixdistrib_hestain_rgb.png" width="350"/>     | <img src="assets/pixdistrib_hestain_hsv.png" width="350"/>     | <img src="assets/pixdistrib_hestain_lab.png" width="350"/>     |
 | **peppers**      | <img src="assets/pixdistrib_peppers_rgb.png" width="350"/>     | <img src="assets/pixdistrib_peppers_hsv.png" width="350"/>     | <img src="assets/pixdistrib_peppers_lab.png" width="350"/>     |
 | **thin39**       | <img src="assets/pixdistrib_thin39_rgb.png" width="350"/>      | <img src="assets/pixdistrib_thin39_hsv.png" width="350"/>      | <img src="assets/pixdistrib_thin39_lab.png" width="350"/>      |
+|--------------|----------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| Dataset      | XYZ                                                                 | YCbCr                                                                 | YIQ (NTSC)                                                                 |
+|--------------|----------------------------------------------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| **alligator1**   | <img src="assets/pixdistrib_alligator1_xyz.png" width="350"/>  | <img src="assets/pixdistrib_alligator1_ycbcr.png" width="350"/>  | <img src="assets/pixdistrib_alligator1_yiq.png" width="350"/>  |
+| **alligator28**  | <img src="assets/pixdistrib_alligator28_xyz.png" width="350"/> | <img src="assets/pixdistrib_alligator28_ycbcr.png" width="350"/> | <img src="assets/pixdistrib_alligator28_yiq.png" width="350"/> |
+| **fabric**       | <img src="assets/pixdistrib_fabric_xyz.png" width="350"/>      | <img src="assets/pixdistrib_fabric_ycbcr.png" width="350"/>      | <img src="assets/pixdistrib_fabric_yiq.png" width="350"/>      |
+| **hestain**      | <img src="assets/pixdistrib_hestain_xyz.png" width="350"/>     | <img src="assets/pixdistrib_hestain_ycbcr.png" width="350"/>     | <img src="assets/pixdistrib_hestain_yiq.png" width="350"/>     |
+| **peppers**      | <img src="assets/pixdistrib_peppers_xyz.png" width="350"/>     | <img src="assets/pixdistrib_peppers_ycbcr.png" width="350"/>     | <img src="assets/pixdistrib_peppers_yiq.png" width="350"/>     |
+| **thin39**       | <img src="assets/pixdistrib_thin39_xyz.png" width="350"/>      | <img src="assets/pixdistrib_thin39_ycbcr.png" width="350"/>      | <img src="assets/pixdistrib_thin39_yiq.png" width="350"/>      |
 
 
 ## 🎨 K-means Clustering Results
@@ -127,6 +145,15 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/segmap_hestain_rgb_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_hsv_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_lab_kmeans.png" width="350"/>     |
 | **peppers**      | <img src="assets/segmap_peppers_rgb_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_hsv_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_lab_kmeans.png" width="350"/>     |
 | **thin39**       | <img src="assets/segmap_thin39_rgb_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_hsv_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_lab_kmeans.png" width="350"/>      |
+|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|
+| Dataset      | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                                        |
+|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|
+| **alligator1**   | <img src="assets/segmap_alligator1_xyz_kmeans.png" width="350"/>  | <img src="assets/segmap_alligator1_ycbcr_kmeans.png" width="350"/>  | <img src="assets/segmap_alligator1_yiq_kmeans.png" width="350"/>  |
+| **alligator28**  | <img src="assets/segmap_alligator28_xyz_kmeans.png" width="350"/> | <img src="assets/segmap_alligator28_ycbcr_kmeans.png" width="350"/> | <img src="assets/segmap_alligator28_yiq_kmeans.png" width="350"/> |
+| **fabric**       | <img src="assets/segmap_fabric_xyz_kmeans.png" width="350"/>      | <img src="assets/segmap_fabric_ycbcr_kmeans.png" width="350"/>      | <img src="assets/segmap_fabric_yiq_kmeans.png" width="350"/>      |
+| **hestain**      | <img src="assets/segmap_hestain_xyz_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_ycbcr_kmeans.png" width="350"/>     | <img src="assets/segmap_hestain_yiq_kmeans.png" width="350"/>     |
+| **peppers**      | <img src="assets/segmap_peppers_xyz_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_ycbcr_kmeans.png" width="350"/>     | <img src="assets/segmap_peppers_yiq_kmeans.png" width="350"/>     |
+| **thin39**       | <img src="assets/segmap_thin39_xyz_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_ycbcr_kmeans.png" width="350"/>      | <img src="assets/segmap_thin39_yiq_kmeans.png" width="350"/>      |
 
 ### Cluster Centroids Visualizations
 
@@ -138,6 +165,15 @@ For each of the six original images, the README showcases:
 | **hestain**      | <img src="assets/cluster_hestain_rgb_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_hsv_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_lab_kmeans.png" width="350"/>    |
 | **peppers**      | <img src="assets/cluster_peppers_rgb_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_hsv_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_lab_kmeans.png" width="350"/>    |
 | **thin39**       | <img src="assets/cluster_thin39_rgb_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_hsv_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_lab_kmeans.png" width="350"/>     |
+|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|
+| Dataset      | XYZ (k-means)                                                        | YCbCr (k-means)                                                        | YIQ (NTSC) (k-means)                                                        |
+|--------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------|
+| **alligator1**   | <img src="assets/cluster_alligator1_xyz_kmeans.png" width="350"/> | <img src="assets/cluster_alligator1_ycbcr_kmeans.png" width="350"/> | <img src="assets/cluster_alligator1_yiq_kmeans.png" width="350"/> |
+| **alligator28**  | <img src="assets/cluster_alligator28_xyz_kmeans.png" width="350"/>| <img src="assets/cluster_alligator28_ycbcr_kmeans.png" width="350"/>| <img src="assets/cluster_alligator28_yiq_kmeans.png" width="350"/>|
+| **fabric**       | <img src="assets/cluster_fabric_xyz_kmeans.png" width="350"/>     | <img src="assets/cluster_fabric_ycbcr_kmeans.png" width="350"/>     | <img src="assets/cluster_fabric_yiq_kmeans.png" width="350"/>     |
+| **hestain**      | <img src="assets/cluster_hestain_xyz_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_ycbcr_kmeans.png" width="350"/>    | <img src="assets/cluster_hestain_yiq_kmeans.png" width="350"/>    |
+| **peppers**      | <img src="assets/cluster_peppers_xyz_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_ycbcr_kmeans.png" width="350"/>    | <img src="assets/cluster_peppers_yiq_kmeans.png" width="350"/>    |
+| **thin39**       | <img src="assets/cluster_thin39_xyz_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_ycbcr_kmeans.png" width="350"/>     | <img src="assets/cluster_thin39_yiq_kmeans.png" width="350"/>     |
 
 # Requirements
 MATLAB <br />

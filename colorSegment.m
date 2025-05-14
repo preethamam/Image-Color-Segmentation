@@ -21,10 +21,12 @@ function  pixelLabels = colorSegment (input, Ioriginal)
 % Inputs:   
 %           input        - Input struct
 %           colorspace   - color segmentation of annotatations by color
-%                           space 'rgb' | 'hsv' | 'lab'
-%                           (keep 'hsv')
+%                           space 'rgb' | 'hsv' | 'lab' | 'xyz' 
+%                                 'ycbcr' | 'yiq' (NTSC)
+%
 %           input.RGBTriplet - [0,0,255]; % RGB value to segment
-%           input.colorspace - 'rgb' % 'rgb' | 'hsv' |'lab'
+%           input.colorspace - 'rgb' % 'rgb' | 'hsv' |'lab' | 'xyz' 
+                                        %  'ycbcr' | 'yiq' (NTSC)
 %           input.tolerance - 70; % tolerance value
 %           input.Kmeans - true; % If true uses K-means clustering. 
 %                                % Else, uses input.RGBTriplet
@@ -51,9 +53,9 @@ function  pixelLabels = colorSegment (input, Ioriginal)
     end
 
     % Validate colorspace
-    validColorSpaces = {'rgb', 'hsv', 'lab'};
+    validColorSpaces = {'rgb', 'hsv', 'lab', 'xyz', 'ycbcr', 'yiq'};
     if ~ismember(lower(input.colorspace), validColorSpaces)
-        error('Invalid colorspace. Valid options are: ''rgb'', ''hsv'', ''lab''.');
+        error('Invalid colorspace. Valid options are: ''rgb'', ''hsv'', ''lab'', ''xyz'', ''ycbcr'', ''yiq''.');
     end
 
     % Validate RGBTriplet
@@ -110,8 +112,29 @@ function  pixelLabels = colorSegment (input, Ioriginal)
 
             % Target L*a*b* color triplet
             targetTriplet = rgb2lab(input.RGBTriplet);
+
+        case 'xyz'
+            % Convert the image to HSV space
+            Itransformed = rgb2xyz(Ioriginal);  
+
+            % Target HSV color triplet
+            targetTriplet = rgb2xyz(input.RGBTriplet);
+
+        case 'ycbcr'
+            % Convert the image to HSV space
+            Itransformed = rgb2ycbcr(im2double(Ioriginal));  
+
+            % Target HSV color triplet
+            targetTriplet = rgb2ycbcr(input.RGBTriplet);
+
+        case 'yiq'
+            % Convert the image to HSV space
+            Itransformed = rgb2ntsc(Ioriginal);  
+
+            % Target HSV color triplet
+            targetTriplet = rgb2ntsc(input.RGBTriplet);
         otherwise
-            error('colorSpace must be ''RGB'', ''Lab'', or ''HSV''');
+            error('colorSpace must be ''RGB'', ''Lab'', ''HSV'', ''XYZ'', ''YCBCR'', or ''YIQ''');
     end
 
     if input.Kmeans
@@ -148,6 +171,7 @@ function  pixelLabels = colorSegment (input, Ioriginal)
                 deltaC2 = deltaC2 * 255;  
                 deltaC3 = deltaC3 * 255;
             case 'hsv'
+                % Create the delta images: delta H, delta S, and delta V.
                 deltaC1 = abs(Channel1 - C1Standard);
                 deltaC1 = min(deltaC1, 1 - deltaC1);        
                 deltaC2 = Channel2 - C2Standard;
@@ -162,8 +186,38 @@ function  pixelLabels = colorSegment (input, Ioriginal)
                 deltaC2 = Channel2 - C2Standard;
                 deltaC3 = Channel3 - C3Standard;
 
+            case 'xyz'
+                % Create the delta images: delta X, delta Y, and delta Z.
+                deltaC1 = Channel1 - C1Standard;
+                deltaC2 = Channel2 - C2Standard;
+                deltaC3 = Channel3 - C3Standard;
+
+                deltaC1 = deltaC1 * 255;  
+                deltaC2 = deltaC2 * 255;  
+                deltaC3 = deltaC3 * 255;
+
+            case 'ycbcr' 
+                % Create the delta images: delta Y, delta Cb, and delta Cr.
+                deltaC1 = Channel1 - C1Standard;
+                deltaC2 = Channel2 - C2Standard;
+                deltaC3 = Channel3 - C3Standard;
+
+                deltaC1 = deltaC1 * 255;  
+                deltaC2 = deltaC2 * 255;  
+                deltaC3 = deltaC3 * 255;
+            
+            case 'yiq'
+                % Create the delta images: delta Y, delta I, and delta Q.
+                deltaC1 = Channel1 - C1Standard;
+                deltaC2 = Channel2 - C2Standard;
+                deltaC3 = Channel3 - C3Standard;
+
+                deltaC1 = deltaC1 * 255;  
+                deltaC2 = deltaC2 * 255;  
+                deltaC3 = deltaC3 * 255;
+
             otherwise
-            error('colorSpace must be ''RGB'', ''Lab'', or ''HSV''');
+                error('colorSpace must be ''RGB'', ''Lab'', ''HSV'', ''XYZ'', ''YCBCR'', or ''YIQ''');
         end
                 
         % Euclidean “distance” in color space
@@ -236,8 +290,14 @@ function labelsKmeansPlots(input, Ioriginal, Itransformed, pixelLabels, centroid
                 channelLabels = {'L*','a*','b*'};
             case 'hsv'
                 channelLabels = {'H','S','V'};
+            case 'xyz'
+                channelLabels = {'X','Y','Z'};
+            case 'ycbcr'
+                channelLabels = {'Y','Cb','Cr'};
+            case 'yiq'
+                channelLabels = {'Y','I','Q'};
             otherwise
-                error('colorSpace must be ''RGB'', ''Lab'', or ''HSV''');
+                 error('colorSpace must be ''RGB'', ''Lab'', ''HSV'', ''XYZ'', ''YCBCR'', or ''YIQ''');
         end
 
         % Reshape the data
@@ -251,9 +311,16 @@ function labelsKmeansPlots(input, Ioriginal, Itransformed, pixelLabels, centroid
             RGBnorm = centroids;  
         elseif strcmp(input.colorspace,'hsv')
             RGBnorm = hsv2rgb(centroids);
-        else
+        elseif strcmp(input.colorspace,'lab')
             RGBnorm = lab2rgb(centroids);
+        elseif strcmp(input.colorspace,'xyz')
+            RGBnorm = xyz2rgb(centroids);
+        elseif strcmp(input.colorspace,'ycbcr')
+            RGBnorm = ycbcr2rgb(centroids);
+        else
+            RGBnorm = ntsc2rgb(centroids);
         end
+
         pixelClusterColors = squeeze(ind2rgb(reshape(pixelLabels, rows*cols, 1), RGBnorm));  
         
         % 3D scatter plot of raw pixels color distribution
