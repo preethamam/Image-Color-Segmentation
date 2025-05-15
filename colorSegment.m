@@ -161,8 +161,11 @@ function  pixelLabels = colorSegment (input, Ioriginal)
         C3Standard = targetTriplet(3) * ones(imheight, imwidth);
         
         switch input.colorspace
-            case 'rgb'
+            case {'rgb', 'xyz', 'ycbcr', 'yiq'}
                 % Create the delta images: delta R, delta G, and delta B.
+                % delta X, delta Y, and delta Z.
+                % delta Y, delta Cb, and delta Cr.
+                % delta Y, delta I, and delta Q.
                 deltaC1 = Channel1 - C1Standard;
                 deltaC2 = Channel2 - C2Standard;
                 deltaC3 = Channel3 - C3Standard;
@@ -185,37 +188,6 @@ function  pixelLabels = colorSegment (input, Ioriginal)
                 deltaC1 = Channel1 - C1Standard;
                 deltaC2 = Channel2 - C2Standard;
                 deltaC3 = Channel3 - C3Standard;
-
-            case 'xyz'
-                % Create the delta images: delta X, delta Y, and delta Z.
-                deltaC1 = Channel1 - C1Standard;
-                deltaC2 = Channel2 - C2Standard;
-                deltaC3 = Channel3 - C3Standard;
-
-                deltaC1 = deltaC1 * 255;  
-                deltaC2 = deltaC2 * 255;  
-                deltaC3 = deltaC3 * 255;
-
-            case 'ycbcr' 
-                % Create the delta images: delta Y, delta Cb, and delta Cr.
-                deltaC1 = Channel1 - C1Standard;
-                deltaC2 = Channel2 - C2Standard;
-                deltaC3 = Channel3 - C3Standard;
-
-                deltaC1 = deltaC1 * 255;  
-                deltaC2 = deltaC2 * 255;  
-                deltaC3 = deltaC3 * 255;
-            
-            case 'yiq'
-                % Create the delta images: delta Y, delta I, and delta Q.
-                deltaC1 = Channel1 - C1Standard;
-                deltaC2 = Channel2 - C2Standard;
-                deltaC3 = Channel3 - C3Standard;
-
-                deltaC1 = deltaC1 * 255;  
-                deltaC2 = deltaC2 * 255;  
-                deltaC3 = deltaC3 * 255;
-
             otherwise
                 error('colorSpace must be ''RGB'', ''Lab'', ''HSV'', ''XYZ'', ''YCBCR'', or ''YIQ''');
         end
