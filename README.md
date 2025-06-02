@@ -4,7 +4,7 @@
 This MATLAB-based repository provides a comprehensive color space flexible framework for segmenting color images in two complementary ways:
 
 1. **Color Picking**  
-   Threshold-based segmentation by selecting a target color vector in one of three color spaces (RGB, HSV, CIELAB, CIEXYZ, YCbCr or YIQ (NTSC)) and isolating pixels within a user-specified tolerance.
+   Threshold-based segmentation by selecting a target color vector in one of six color spaces (RGB, HSV, CIELAB, CIEXYZ, YCbCr or YIQ (NTSC)) and isolating pixels within a user-specified tolerance.
 
 2. **K-Means Clustering**  
    Unsupervised segmentation by grouping all pixels in the chosen color space into *k* clusters and visualizing each cluster as a distinct region.
