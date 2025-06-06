@@ -103,14 +103,14 @@ For each of the six original images, the README showcases:
 ### Segmentation Maps
 
 | Dataset      | RGB                                                             | HSV                                                             | LAB                                                             |
-|--------------|-----------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+|--------------|:---:|:---:|:---:|
 | **alligator1**   | <img src="assets/segmap_alligator1_rgb.png" width="350"/>   | <img src="assets/segmap_alligator1_hsv.png" width="350"/>   | <img src="assets/segmap_alligator1_lab.png" width="350"/>   |
 | **alligator28**  | <img src="assets/segmap_alligator28_rgb.png" width="350"/>  | <img src="assets/segmap_alligator28_hsv.png" width="350"/>  | <img src="assets/segmap_alligator28_lab.png" width="350"/>  |
 | **fabric**       | <img src="assets/segmap_fabric_rgb.png" width="350"/>       | <img src="assets/segmap_fabric_hsv.png" width="350"/>       | <img src="assets/segmap_fabric_lab.png" width="350"/>       |
 | **hestain**      | <img src="assets/segmap_hestain_rgb.png" width="350"/>      | <img src="assets/segmap_hestain_hsv.png" width="350"/>      | <img src="assets/segmap_hestain_lab.png" width="350"/>      |
 | **peppers**      | <img src="assets/segmap_peppers_rgb.png" width="350"/>      | <img src="assets/segmap_peppers_hsv.png" width="350"/>      | <img src="assets/segmap_peppers_lab.png" width="350"/>      |
 | **thin39**       | <img src="assets/segmap_thin39_rgb.png" width="350"/>       | <img src="assets/segmap_thin39_hsv.png" width="350"/>       | <img src="assets/segmap_thin39_lab.png" width="350"/>       |
-|       | XYZ                                                             | YCbCr                                                             | YIQ (NTSC)                                                             |
+|                  | **XYZ**                                                     | **YCbCr**                                                   | **YIQ (NTSC)**                                              |
 | **alligator1**   | <img src="assets/segmap_alligator1_xyz.png" width="350"/>   | <img src="assets/segmap_alligator1_ycbcr.png" width="350"/>   | <img src="assets/segmap_alligator1_yiq.png" width="350"/>   |
 | **alligator28**  | <img src="assets/segmap_alligator28_xyz.png" width="350"/>  | <img src="assets/segmap_alligator28_ycbcr.png" width="350"/>  | <img src="assets/segmap_alligator28_yiq.png" width="350"/>  |
 | **fabric**       | <img src="assets/segmap_fabric_xyz.png" width="350"/>       | <img src="assets/segmap_fabric_ycbcr.png" width="350"/>       | <img src="assets/segmap_fabric_yiq.png" width="350"/>       |
